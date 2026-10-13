@@ -28,5 +28,11 @@
     "time":  {"name": "按添加时间排序(近-远)", "aliases": ["最新", "最近", "时间", "添加时间", "上新", "新上架", "新剧", "近期", "newest", "latest", "recent"]},
     "money": {"name": "按近30天充值金额排序(高-低)", "aliases": ["充值", "收益", "收入", "金额", "热门", "最热", "爆款", "赚钱", "流水", "排行", "榜", "近30天", "30天", "revenue", "hot", "top"]}
   },
+  "promotion_types": {
+    "link_book": {"name": "资源推广链接", "aliases": ["资源链接", "作品链接", "作品短链", "资源短链", "书链接", "book链接", "linkbook"]},
+    "link_app":  {"name": "App推广链接",  "aliases": ["app", "应用", "app链接", "app短链", "应用链接", "应用推广", "app推广", "linkapp"]},
+    "code":      {"name": "资源推广口令", "aliases": ["口令", "推广口令", "资源口令", "邀请码", "code"]},
+    "web_iframe": {"name": "内嵌播放器",  "aliases": ["内嵌", "嵌入", "播放器", "iframe", "embed", "webiframe"]}
+  },
   "defaults": {"sort": "time", "count": 10, "max_count": 200, "page_size": 15, "max_page_size": 30}
 }

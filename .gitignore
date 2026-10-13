@@ -1,4 +1,6 @@
-config/accounts.json
+# 任何 skill 下的账号密码配置，禁止提交
+**/config/accounts.json
+
 __pycache__/
 .DS_Store
 .idea/

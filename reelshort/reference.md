@@ -10,6 +10,22 @@
 
 详情里取：`app_promotion_link`（App推广链接）、`book_promotion_link`（资源推广链接）。**每本剧的两条链接都不同**。
 
+## 收益接口（我的收益 → 短剧预估收益）
+
+三个接口请求体基本一致：`{"app":"reelshort","book_ids":[],"min_date":"YYYY-MM-DD","max_date":"YYYY-MM-DD","promotion_value":"","promotion_type"?,"exist_order"?,"page","limit"}`
+
+| 用途 | 路径 | 返回 |
+|------|------|------|
+| 明细列表 | `/api/v1/bill/app-estimate` | `data.list[]`（date/book_title/promotion_type/promotion_value/order_cnt/total_revenue/book_id）+ `data.total` |
+| 汇总 | `/api/v1/bill/app-estimate-agg` | `data.book_cnt / order_cnt / total_revenue`（无需 page/limit） |
+| **下载** | `/api/v1/bill/app-estimate-export` | 直接返回 `.xlsx` 二进制；出错时返回 JSON |
+
+- `promotion_type` 取值：`link_book`(资源推广链接) / `link_app`(App推广链接) / `code`(资源推广口令) / `web_iframe`(内嵌播放器)；不传 = 全部。
+- `book_ids` 为空 = 全部剧；`exist_order:true` = 仅含订单数据。
+- 导出**忽略** `page/limit`，导出全部符合条件的数据；无数据时也返回一个只有表头的 xlsx（脚本据 `total==0` 不下载）。
+- 日期：前端用 dayjs 固定时区 `America/Los_Angeles`，选择器限制近 30 天到昨天；服务端实测不拦截更长区间和“今天”。
+- xlsx 两个工作表：汇总明细、订单明细。
+
 ## 短链解析
 
 `GET https://reelslink.com/cps/<code>`（不接受 HEAD）返回 `302`，`Location` 形如：
