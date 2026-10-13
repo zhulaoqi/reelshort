@@ -1,0 +1,4 @@
+config/accounts.json
+__pycache__/
+.DS_Store
+.idea/

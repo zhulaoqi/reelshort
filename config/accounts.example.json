@@ -1,0 +1,9 @@
+{
+  "accounts": [
+    {
+      "email": "name@example.com",
+      "password": "your-password",
+      "aliases": ["name", "company"]
+    }
+  ]
+}

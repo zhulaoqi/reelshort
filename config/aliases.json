@@ -1,0 +1,32 @@
+{
+  "_comment": "用户口语 -> 接口参数的归类表。匹配时先精确、再取“被用户输入包含的最长别名”。纯 ASCII 且长度<4 的别名只做精确匹配。新增叫法直接往 aliases 里加。",
+  "languages": {
+    "en":    {"name": "英语",       "aliases": ["英文", "美国", "美式", "english", "en-us", "eng"]},
+    "es":    {"name": "西班牙语",   "aliases": ["西语", "西班牙", "西文", "spanish"]},
+    "pt":    {"name": "葡萄牙语",   "aliases": ["葡语", "葡萄牙", "葡文", "巴西", "portuguese"]},
+    "th":    {"name": "泰语",       "aliases": ["泰文", "泰国", "thai"]},
+    "in":    {"name": "印尼语",     "aliases": ["印尼", "印度尼西亚", "印尼文", "indonesian", "id"]},
+    "zh":    {"name": "中文",       "aliases": ["简体", "简体中文", "国语", "普通话", "汉语", "中国", "chinese", "cn"]},
+    "de":    {"name": "德语",       "aliases": ["德文", "德国", "german"]},
+    "fr":    {"name": "法语",       "aliases": ["法文", "法国", "french"]},
+    "hi":    {"name": "印地语",     "aliases": ["印度语", "印度", "hindi"]},
+    "tr":    {"name": "土耳其语",   "aliases": ["土语", "土耳其", "土文", "turkish"]},
+    "fil":   {"name": "菲律宾语",   "aliases": ["菲语", "菲律宾", "塔加拉语", "filipino", "tagalog"]},
+    "ja":    {"name": "日语",       "aliases": ["日文", "日本语", "日本", "japanese", "jp"]},
+    "ko":    {"name": "韩语",       "aliases": ["韩文", "韩国", "朝鲜语", "korean", "kr"]},
+    "ru":    {"name": "俄语",       "aliases": ["俄文", "俄罗斯", "russian"]},
+    "vi":    {"name": "越南语",     "aliases": ["越语", "越南", "越文", "vietnamese"]},
+    "bg":    {"name": "保加利亚语", "aliases": ["保语", "保加利亚", "bulgarian"]},
+    "cs":    {"name": "捷克语",     "aliases": ["捷克", "捷语", "czech"]},
+    "ar":    {"name": "阿拉伯语",   "aliases": ["阿语", "阿拉伯", "阿文", "arabic"]},
+    "zh-TW": {"name": "繁体中文",   "aliases": ["繁体", "繁中", "繁體", "台湾", "港台", "zh-tw", "tw"]},
+    "pl":    {"name": "波兰语",     "aliases": ["波语", "波兰", "polish"]},
+    "it":    {"name": "意大利语",   "aliases": ["意语", "意大利", "意文", "italian"]},
+    "ro":    {"name": "罗马尼亚语", "aliases": ["罗语", "罗马尼亚", "romanian"]}
+  },
+  "sorts": {
+    "time":  {"name": "按添加时间排序(近-远)", "aliases": ["最新", "最近", "时间", "添加时间", "上新", "新上架", "新剧", "近期", "newest", "latest", "recent"]},
+    "money": {"name": "按近30天充值金额排序(高-低)", "aliases": ["充值", "收益", "收入", "金额", "热门", "最热", "爆款", "赚钱", "流水", "排行", "榜", "近30天", "30天", "revenue", "hot", "top"]}
+  },
+  "defaults": {"sort": "time", "count": 10, "max_count": 200, "page_size": 15, "max_page_size": 30}
+}
